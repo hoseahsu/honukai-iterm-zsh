@@ -40,8 +40,9 @@ ys_hg_prompt_info() {
 
 # Prompt format: \n # USER at MACHINE in DIRECTORY on git:BRANCH STATE [TIME] \n $
 PROMPT="
-%{$terminfo[bold]$fg[blue]%}$%{$reset_color%}\
+%{$terminfo[bold]$fg[blue]%}I'm %{$reset_color%}\
 %{$fg[cyan]%}%n\
+%{$fg[white]%}·\
 %{$fg[green]%}$(box_name) \
 %{$fg[white]%}in \
 %{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
@@ -52,9 +53,9 @@ ${git_info} \
 
 if [[ "$USER" == "root" ]]; then
 PROMPT="
-%{$terminfo[bold]$fg[blue]%}#%{$reset_color%}\
-%{$bg[yellow]%}%{$fg[cyan]%}%n%{$reset_color%}\
-%{$fg[white]%}@\
+%{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
+%{$bg[yellow]%}%{$fg[cyan]%}%n%{$reset_color%} \
+%{$fg[white]%}@ \
 %{$fg[green]%}$(box_name) \
 %{$fg[white]%}in \
 %{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
